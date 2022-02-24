@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>anh tay</h1>
+<button id="text" type="button" onclick="showMessage();">Click Me!</button>
+<h id="hop">
+
+</h>
+<p style="color: orange; font-size: 20px">giờ bạn hãy chọn lựa những con số may mắn</p>
+<input id="rs1" type="number" value="text1">
+<input id="rs2" type="number" value="text2">
+<select onchange="goTohop()" name="text" id="l1">
+    <option value="bv1">Thanh Nhan</option>
+    <option value="bv2">Nhiệt Đới Gió Mùa</option>
+    <option value="bv3">Tim Hà Nội</option>
+</select>
+<p onclick="randomResulf()" id="goodLuck">
+    Bạn click vào đây để nhận được con số may mắn:
+</p>
+</body>
+<script>
+    function showMessage(){
+        document.getElementById('text').innerText = 'bạn đã vào thiên đàng'
+        alert('tắt hộ tôi hộp thoai')
+    }
+
+    document.getElementById('hop').innerText = 'Hopital đang chờ bạn'
+
+        function goTohop() {
+        let  b =   document.getElementById('l1').value;
+        // document.write(' tôi đang call, chờ xíu')
+        }
+    addEventListener('change', goTohop )
+    function randomResulf () {
+        let add = document.getElementById('rs1').value;
+        let ran = document.getElementById('rs2').value;
+        document.getElementById('goodLuck').innerHTML = 'số giường bệnh của bạn là :' +(ran*add*3/2)
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input id="c1" type="number">
+<input id="c2" type="number">
+<input id="c3" type="number">
+<button onclick="dapAn()" id="btn">tam giác gì?</button>
+
+</body>
+<h1 id="resulf">
+
+</h1>
+<script>
+
+    function dapAn() {
+        let a= +document.getElementById('c1').value;
+        let b= +document.getElementById('c2').value;
+        let c= +document.getElementById('c3').value;
+        let ketqua = '';
+        if(a>0 && b>0 && c>0 && a + b >c && b + c> a && a + c > b) {
+            ketqua = ' đây là một tam giác'
+            if (a===b && b===c){
+                ketqua = 'là tam giác đều'
+            }else {
+                if (a===b || a===c || b===c){
+                    ketqua = 'là tam giác cân'
+                }
+            }
+            if (a*a + b*b === c*c || b*b + c*c === a*a ||c*c + a*a === b*b) {
+                ketqua = 'tam giac vuông'
+            }
+        }else {
+            ketqua = 'không là tam giác'
+        }
+        document.getElementById('resulf').innerHTML =ketqua;
+    }
+
+
+
+</script>
+</html>
